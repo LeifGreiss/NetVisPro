@@ -17,7 +17,6 @@
 <svg width="3000" height="1700"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-//https://my.up.ist.psu.edu/lng5099/Proj5_NetVis.html
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
@@ -82,7 +81,7 @@ d3.json("NettyVis.json", function(error, graph) {
 
   simulation.force("link")
       .links(graph.links);
-//This actually appears to be what draws the connecting link as when it is removed then the links do not appea and the nodes end up floating in space
+//This actually appears to be what draws the connecting link as when it is removed then the links do not appear and the nodes end up floating in space
   function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })
